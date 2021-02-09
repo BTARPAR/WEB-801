@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Fourth Web Page</title>
+    <!--External Style Method-->
+    <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<!--Container wrap to everything-->
+<div id="container">
+    <!--Brand of website-->
+    <header>My Web Site Brand</header>
+    <!--Main Navigation-->
+    <nav>
+        <ul>
+            <li><a href="js-demo2.html">Home</a></li>
+            <li><a href="js-demo2b.html">About</a></li>
+            <li><a href="js-demo2d.html">Gallery</a></li>
+            <li><a href="js-demo2c.html">Contact</a></li>
+        </ul>
+    </nav>
+    <!--End Of Navigation-->
+    <!--Main Content-->
+    <main>
+        <h1>My Fourth Heading</h1>
+        <p>My Fourth paragraph.</p>
+        <!--Album START-->
+        <ul id="album">
+            <!--<li id="photo"><img src="images/winterland1.jpg"></li>-->
+            <!--<li id="photo"><img src="images/winterland2.jpg"></li>-->
+            <!--<li id="photo"><img src="images/winterland3.jpg"></li>-->
+            <!--<li id="photo"><img src="images/winterland4.jpg"></li>-->
+            <!--<li id="photo"><img src="images/winterland5.jpg"></li>-->
+            <!--<li id="photo"><img src="images/winterland6.jpg"></li>-->
+        </ul>
+        <!--Album END-->
+    </main>
+    <!--End Of Main Content-->
+    <!--Footer Information-->
+    <footer>&copy; Copyright 2020</footer>
+</div>
+<!--End Container-->
+<!--Script START-->
+<script>
+  var photos = []
+  var fileNames = []
+  var imageList = []
+  var image
+  var openList = "<li id='photo'>"
+  var closeList = '</li>'
+  // Create loop starting from the index 0
+  for (var i = 0; i < 6; i++) {
+    fileNames.push("winterland" + (i + 1)) // Will create all 6 images that we just comment it put
+    photos.push(`<img alt=${fileNames[i]} src=images/${fileNames[i]}.jpg>`)
+    image = openList + photos[i] + closeList
+    imageList.push(image)
+  }
+
+  document.getElementById("album").innerHTML = imageList
+</script>
+<!--Script END-->
+</body>
+</html>

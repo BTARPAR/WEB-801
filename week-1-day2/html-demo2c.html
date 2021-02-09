@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Third Web Page</title>
+</head>
+<body>
+<!--Container wrap to everything-->
+<div id="container">
+    <!--Brand of website-->
+    <header>My Web Site Brand</header>
+    <!--Main Navigation-->
+    <nav>
+        <ul>
+            <li><a href="html-demo2.html">Home</a></li>
+            <li><a href="html-demo2b.html">About</a></li>
+            <li>Gallery</li>
+            <li><a href="html-demo2c.html">Contact</a></li>
+        </ul>
+    </nav>
+    <!--End Of Navigation-->
+    <!--Main Content-->
+    <main>
+        <h1>My Third Heading</h1>
+        <p>My Third paragraph.</p>
+        <!--Signup Form Start-->
+        <form action="/signup" method="post">
+            <fieldset>
+                <legend> User personal information</legend>
+                <!--User's Name Information Start-->
+                <label>Enter your full name</label><br>
+                <input type="text" name="name"/><br>
+                <!--User's Name Information End-->
+
+                <!--User's Email Information Start-->
+                <label>Enter your email</label><br>
+                <input type="email" name="email"/><br>
+                <!--User's Email Information End-->
+
+                <!--User's Phone Information Start-->
+                <label>Enter your phone</label><br>
+                <input type="text" name="phone"/><br>
+                <!--User's Email Information End-->
+
+                <!--User's Gender Information Start-->
+                <br><label>Select your gender</label><br>
+                <input type="radio" name="gender" value="male"/>Male
+                <input type="radio" name="gender" value="female"/>Female<br>
+                <br>
+                <!--User's Gender Information End-->
+
+                <!--User's Contact Information Start-->
+                <label>How should we contact you?</label><br>
+                <select>
+                    <option>Email</option>
+                    <option>Phone</option>
+                </select><br>
+                <!--User's Contact Information End-->
+
+                <!--User's Contact Information Response Start-->
+                <br><textarea rows="5" cols="30"></textarea><br>
+                <!--User's Contact Information Response End-->
+
+                <!--User Ready To Take Submit Action Start-->
+                <input type="submit" value="sign-up">
+                <!--User Ready To Take Submit Action End-->
+            </fieldset>
+        </form>
+        <!--Signup Form End-->
+    </main>
+    <!--End Of Main Content-->
+    <!--Footer Information Start-->
+    <footer>&copy; Copyright 2020</footer>
+    <!--Footer Information End-->
+</div>
+<!--End Container-->
+</body>
+</html>

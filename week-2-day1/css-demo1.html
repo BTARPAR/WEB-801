@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My First Web Page</title>
+    <!--Embed Style Method-->
+    <style>
+        header {
+            background: url("images/central_park.jpg") 0 -200px no-repeat;
+            background-size: 1500px;
+            /*background-position: 0 -200px;*/
+            /*background-repeat: no-repeat;*/
+            height: 400px;
+            padding-top: 100px;
+            padding-left: 100px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        li {
+            list-style-type: none;
+            display: inline;
+            padding: 0 20px;
+        }
+
+        li a {
+            text-decoration: none;
+        }
+
+        li a:link {
+            color: #000;
+        }
+
+        li a:visited {
+            color: #818db3;
+        }
+
+        li a:hover {
+            color: #333;
+        }
+
+        li a:active {
+            color: #753a30;
+        }
+
+        nav {
+            background-color: rgb(255, 245, 238);
+            height: 50px;
+            text-align: center;
+            padding-top: 2px;
+        }
+
+        main {
+            height: 400px;
+        }
+
+        main h1 {
+            color: rgb(129, 141, 179);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        footer {
+            height: 40px;
+            background-color: rgb(129, 141, 179);
+            text-align: center;
+            padding-top: 20px;
+            color: rgb(211, 218, 240);
+        }
+    </style>
+</head>
+<body>
+<!--Container wrap to everything-->
+<div id="container">
+    <!--Brand of website-->
+    <header style="font-size: 60px; color: #fff">My Web Site Brand</header>
+    <!--Main Navigation-->
+    <nav>
+        <ul>
+            <li><a href="css-demo1.html">Home</a></li>
+            <li><a href="css-demo1b.html">About</a></li>
+            <li>Gallery</li>
+            <li><a href="css-demo1c.html">Contact</a></li>
+        </ul>
+    </nav>
+    <!--End Of Navigation-->
+    <!--Main Content-->
+    <main>
+        <h1>My First Heading</h1>
+        <p>My first paragraph.</p>
+        <!--<img src="images/central_park.jpg" alt="Central Park" width="500">-->
+    </main>
+    <!--End Of Main Content-->
+    <!--Footer Information-->
+    <footer>&copy; Copyright 2020</footer>
+</div>
+<!--End Container-->
+</body>
+</html>
