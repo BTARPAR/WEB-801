@@ -85,13 +85,3 @@ footer {
     }
 }
 
-/* Large devices (Tablet, laptop or external screen)
-** If Screen is smaller than 600px
-** This rule will gets applied
-*/
-@media only screen and (max-width: 600px) {
-    .cards {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
-
