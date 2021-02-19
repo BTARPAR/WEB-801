@@ -11,7 +11,7 @@
 <div id="container">
     <!--Navigation Header Of Website Begin-->
     <header>
-        <div class="main-header">
+        <div class="main-header fixed-top">
             <div class="logo">
                 <img src="images/logo.png" alt="Great Cliff Logo" width="125">
             </div>
@@ -28,7 +28,10 @@
     <!--End Of Navigation Header Of Website-->
     <!--Main Content Begin-->
     <main>
-        <h1>Contacting Us</h1>
+        <h1>
+            <span>Contacting Us</span>
+            <span class="badge badge-secondary">New</span>
+        </h1>
         <div>
             <p>
                 You can drop by the visitors information center at the cliff site that you plan on visiting. They are
@@ -40,36 +43,40 @@
 
         <div class="contactinfo">
             <div class="phone">
-                <span>Phone:</span>
+                <span class="badge badge-pill badge-primary">Phone</span>
                 <span>(800)GCLIFFS</span>
             </div>
             <div class="email">
-                <span>Email:</span>
+                <span class="badge badge-pill badge-warning">Email:</span>
                 <span>info@greatcliffs.com</span>
             </div>
         </div>
 
-        <form action="/contact" method="post">
-            <fieldset>
-                <legend>Contact Form</legend>
-                <div class="textbox">
-                    <label>Name:</label>
-                    <input type="text" name="name" placeholder="John Doe">
-                    <label>Email:</label>
-                    <input type="email" name="email" placeholder="johndoe@gmail.com">
-                    <label>Phone:</label>
-                    <input type="text" name="phone" placeholder="xxx-xxx-xxxx">
+        <form action="/contact" method="post" class="col-5">
+            <fieldset class="contact-form">
+                <legend class="w-auto">Contact Form</legend>
+                <div class="textbox form-group">
+                    <label class="control-label" for="name">Name:</label>
+                    <input type="text" name="name" id="name" placeholder="John Doe" class="form-control">
+                    <label class="form-check-label">Email:</label>
+                    <input type="email" name="email" placeholder="johndoe@gmail.com" class="form-control">
+                    <label class="form-check-label">Phone:</label>
+                    <input type="text" name="phone" placeholder="xxx-xxx-xxxx" class="form-control">
                 </div>
 
-                <div class="radios">
+                <div class="radios form-check form-check-inline align-middle">
                     <label>How should we contact you?</label>
-                    <input type="radio" name="contact" value="email" checked><span>Email</span>
-                    <input type="radio" name="contact" value="phone"><span>Phone</span>
+                    <input type="radio" name="contact" value="email" checked class="form-check-input" for="email">
+                    <span class="form-check-input" id="email">Email</span>
+                    <input type="radio" name="contact" value="phone" class="form-check-input" for="phone">
+                    <span class="form-check-input" id="phone">Phone</span>
+                    <span class="badge bg-danger text-light">Required</span>
                 </div>
 
-                <div class="selectmenu">
-                    <label>Which Cliff are you inquiring?</label>
-                    <select>
+
+                <div class="selectmenu form-group">
+                    <label for="exampleFormControlSelect1">Which Cliff are you inquiring?</label>
+                    <select class="form-control d-inline" id="exampleFormControlSelect1">
                         <option>West Cliff</option>
                         <option>North Cliff</option>
                         <option>East Cliff</option>
@@ -77,19 +84,25 @@
                     </select>
                 </div>
 
-                <div class="commentbox">
-                    <label>How did you hear about us:</label>
-                    <textarea rows="10" cols="60"></textarea>
+                <div class="commentbox form-group">
+                    <div class="mt-2 mb-2">
+                        <label for="exampleFormControlTextarea1" class="d-inline">How did you hear about us:</label>
+                        <button type="button" class="btn btn-primary">
+                            Entered Characters length <span class="badge bg-secondary text-light" id="updateBadge">0</span>
+                        </button>
+                    </div>
+                    <textarea rows="10" cols="60" class="form-control" id="exampleFormControlTextarea1"></textarea>
                 </div>
 
                 <!--Random Code-->
                 <div class="randomnumber">
-                    <input type="text" id="codeentered" name="randomcode" placeholder="Enter characters">
+                    <input type="text" id="codeentered" name="randomcode" placeholder="Enter characters"
+                           class="form-control">
                     <p id="codes"></p>
                 </div>
 
                 <div class="button">
-                    <input type="submit" id="submit" value="Inquire">
+                    <input type="submit" class="btn btn-primary" id="submit" value="Inquire">
                 </div>
             </fieldset>
         </form>
@@ -140,6 +153,12 @@
 
 </div>
 <!--End Container-->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
 <!--External Javascript Code for Generating Partners Logo START-->
 <script type="text/javascript" src="js/site_scripts.js"></script>
 <!--External Javascript Code for Generating Partners Logo END-->
@@ -149,7 +168,9 @@
 <!--External Javascript Code for Generating Random Number END-->
 
 <!--External Javascript Code for change selection START-->
-<script type="text/javascript" src="js/selectHandler.js"></script>
+<script type="text/javascript" src="js/updateNumber.js"></script>
 <!--External Javascript Code for change selection END-->
+
+
 </body>
 </html>
