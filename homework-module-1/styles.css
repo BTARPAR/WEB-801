@@ -36,6 +36,9 @@ header {
     height: 100px;
 }
 
+.main-header .main-menu ul {
+    margin: 0;
+}
 .main-header .logo img {
     width: 100px;
     height: 100px;
@@ -231,6 +234,12 @@ td:first-child {
 /*activities.html END*/
 
 /*contact.html START*/
+.contact-form {
+    padding-block-start: 0.35em;
+    padding-inline-start: 0.75em;
+    padding-inline-end: 0.75em;
+    padding-block-end: 0.625em;
+}
 main h1 {
     color: #9ED304;
 }
@@ -275,7 +284,6 @@ input {
 }
 
 .radios span {
-    color: lightgray;
     font-weight: lighter;
 }
 
@@ -289,7 +297,8 @@ input {
 
 .radios label, .selectmenu label {
     display: inline-block;
-    margin: 20px 0 0 0;
+    padding: 0.5rem 0;
+    margin: 0;
     text-align: center;
 
 }
@@ -314,7 +323,6 @@ input[type='submit'] {
     display: block;
     margin: 20px 0 10px 0;
     width: 100px;
-    height: 30px;
     border: none;
     /*background: #4977D1;*/
     color: #fff;
@@ -328,6 +336,7 @@ input[type='submit'] {
 }
 
 .randomnumber input {
+    display: inline;
     width: 150px;
     margin-right: 20px;
 }
